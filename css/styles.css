@@ -22,6 +22,7 @@
   --social-button-hover: #404bbf;
   --modal-bgc: rgba(46, 47, 66, 0.4);
   --modal-window: #fcfcfc;
+  --modal-text: #8e8f99;
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* UTILITIES */
@@ -130,6 +131,8 @@ img {
   top: 50%;
   left: 50%;
 
+  padding: 24px;
+
   max-width: 408px;
   width: 100%;
   min-height: 576px;
@@ -143,14 +146,13 @@ img {
 }
 
 .modal-btn {
-  position: absolute;
+  /* position: absolute; */
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  top: 24px;
-  right: 24px;
+  margin-left: auto;
 
   width: 24px;
   height: 24px;
@@ -175,6 +177,141 @@ img {
 .close-icon {
   width: 8px;
   height: 8px;
+}
+
+.modal-title {
+  margin-top: 24px;
+  margin-bottom: 14px;
+
+  text-align: center;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  color: var(--title-text-color);
+}
+
+.form {
+  text-align: left;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+
+  color: var(--modal-text);
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
+
+  outline: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 18px;
+  height: 24px;
+
+  transform: translateY(-50%);
+  transition: fill 250ms var(--cubic);
+}
+
+.form-field:focus-within .form-input,
+.form-field:focus-within .form-icon,
+.form-comment:focus-within {
+  border-color: var(--social-button-color);
+  fill: var(--social-button-color);
+}
+
+.form-comment {
+  resize: none;
+  outline: transparent;
+  width: 360px;
+  height: 120px;
+  padding: 8px 16px;
+
+  transition: border-color 250ms var(--cubic);
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-comment::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+/* .checkbox {
+  position: absolute;
+  appearance: none;
+} */
+
+.checkbox-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+
+  border: 1.25px solid var(--title-text-color);
+  border-radius: 2px;
+  fill: transparent;
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-color: var(--hover-focus-color);
+  border: transparent;
+  fill: var(--white);
+}
+
+.checkbox-label {
+  outline: 1px solid teal;
+  display: flex;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+
+  color: #757575;
+}
+
+/* .checkbox {
+  position: absolute;
+  overflow: hidden;
+} */
+
+.policy {
+  color: var(--social-button-color);
 }
 
 /* LOGO */
@@ -215,7 +352,6 @@ img {
 }
 .link:hover,
 .link:focus {
-  outline: none;
   color: var(--hover-focus-color);
 }
 .link.active {
@@ -272,7 +408,6 @@ img {
 
 .contact:hover,
 .contact:focus {
-  outline: none;
   color: var(--hover-focus-color);
 }
 
@@ -332,7 +467,6 @@ img {
 }
 .hero:hover,
 .hero:focus {
-  outline: none;
   background-color: var(--hover-button-color);
 }
 
@@ -436,7 +570,6 @@ img {
 
 .social-link:hover,
 .social-link:focus {
-  outline: none;
   background-color: var(--social-button-hover);
 }
 
@@ -562,7 +695,6 @@ img {
 }
 
 .customer-button:is(:hover, :focus) {
-  outline: none;
   border-color: #404bbf;
 }
 
@@ -689,7 +821,6 @@ img {
 
 .subscribe-button:hover,
 .subscribe-button:focus {
-  outline: none;
   background-color: var(--hover-focus-color);
 }
 
@@ -727,7 +858,6 @@ img {
 
 .input-email:hover,
 .input-email:focus {
-  outline: none;
   border: 1px solid var(--social-button-color);
 }
 
@@ -764,7 +894,6 @@ img {
 
 .button-filter:hover,
 .button-filter:focus {
-  outline: none;
   background-color: var(--hover-focus-color);
   color: var(--white);
   border-color: transparent;
@@ -801,7 +930,6 @@ img {
 }
 
 .example-link:is(:hover, :focus) {
-  outline: none;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
