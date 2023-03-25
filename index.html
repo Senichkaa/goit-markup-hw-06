@@ -65,16 +65,6 @@
           <button type="button" class="hero button" data-modal-open>
             Order Service
           </button>
-          <!-- MODAL -->
-          <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-              <button type="button" class="modal-btn" data-modal-close>
-                <svg class="close-icon">
-                  <use href="./images/icons.svg#icon-exit"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
         </div>
       </section>
       <!-- advantages section -->
@@ -401,8 +391,39 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe">
+          <p class="subscribe-header">Subscribe</p>
+          <div class="subscribe-wrapper">
+            <form action="" name="email_form">
+              <label for="user_email">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                  class="input-email"
+                />
+              </label>
+            </form>
+            <button type="submit" class="button subscribe-button">
+              Subscribe
+              <svg class="subscribe-icon">
+                <use href="./images/icons.svg#icon-send-plane"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
+    <!-- MODAL -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn" data-modal-close>
+          <svg class="close-icon">
+            <use href="./images/icons.svg#icon-exit"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./modal.js"></script>
   </body>
 </html>
