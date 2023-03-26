@@ -300,7 +300,7 @@ img {
 
 .checkbox:checked + .checkbox-icon {
   background-color: var(--hover-focus-color);
-  border: transparent;
+  border: 1.25px solid transparent;
   fill: var(--white);
 }
 
@@ -316,7 +316,7 @@ img {
 }
 
 .checkbox:focus + .checkbox-icon {
-  border: 2px solid var(--hover-focus-color);
+  border: 1.25px solid var(--hover-focus-color);
 }
 
 .policy {
