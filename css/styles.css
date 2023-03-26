@@ -291,6 +291,8 @@ img {
   width: 16px;
   height: 16px;
 
+  transition: background-color 250ms var(--cubic);
+
   border: 1.25px solid var(--title-text-color);
   border-radius: 2px;
   fill: transparent;
@@ -303,7 +305,6 @@ img {
 }
 
 .checkbox-label {
-  outline: 1px solid teal;
   display: flex;
   align-items: center;
 
@@ -314,13 +315,33 @@ img {
   color: #757575;
 }
 
-/* .checkbox {
-  position: absolute;
-  overflow: hidden;
-} */
+.checkbox:focus + .checkbox-icon {
+  border: 2px solid var(--hover-focus-color);
+}
 
 .policy {
   color: var(--social-button-color);
+}
+
+.send-button.button {
+  width: fit-content;
+  height: 56px;
+  padding: 16px 65px;
+  background-color: var(--social-button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  display: block;
+  margin: 24px auto 0;
+  transition: background-color 250ms var(--cubic);
+}
+
+.send-button:hover,
+.send-button:focus {
+  background-color: var(--hover-focus-color);
 }
 
 /* LOGO */
