@@ -206,6 +206,7 @@ img {
 
 .form-field {
   position: relative;
+  display: block;
 }
 
 .form-label {
@@ -226,6 +227,7 @@ img {
   padding-left: 38px;
 
   outline: transparent;
+  transition: border-color 250ms var(--cubic);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
@@ -233,7 +235,7 @@ img {
 .form-icon {
   position: absolute;
   top: 50%;
-  left: 15px;
+  left: 16px;
   width: 18px;
   height: 24px;
 
@@ -249,6 +251,7 @@ img {
 }
 
 .form-comment {
+  display: block;
   resize: none;
   outline: transparent;
   width: 360px;
@@ -810,7 +813,7 @@ img {
   fill: var(--lightmode-color);
 }
 .footer-subscribe {
-  margin-left: 80px;
+  margin-left: auto;
 }
 
 .subscribe-header {

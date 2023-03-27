@@ -394,8 +394,8 @@
         <div class="footer-subscribe">
           <p class="subscribe-header">Subscribe</p>
           <div class="subscribe-wrapper">
-            <form action="" name="email_form">
-              <label for="user_email">
+            <form name="email_form">
+              <label>
                 <input
                   type="email"
                   name="email"
@@ -423,7 +423,7 @@
           </svg>
         </button>
         <p class="modal-title">Leave your contacts and we will call you back</p>
-        <form action="" name="form">
+        <form name="form">
           <div class="modal-form">
             <label>
               <span class="form-label">Name</span>
@@ -437,7 +437,7 @@
             <label>
               <span class="form-label">Phone</span>
               <span class="form-field">
-                <input type="text" name="name" class="form-input" />
+                <input type="tel" name="phone-number" class="form-input" />
                 <svg class="form-icon">
                   <use href="./images/icons.svg#icon-phone"></use>
                 </svg>
@@ -446,7 +446,7 @@
             <label>
               <span class="form-label">Email</span>
               <span class="form-field">
-                <input type="text" name="name" class="form-input" />
+                <input type="email" name="email-address" class="form-input" />
                 <svg class="form-icon">
                   <use href="./images/icons.svg#icon-email"></use>
                 </svg>
@@ -469,7 +469,7 @@
               value="accepted"
             />
             <span class="checkbox-icon">
-              <svg>
+              <svg width="10" height="8">
                 <use href="./images/icons.svg#icon-checkmark"></use>
               </svg>
             </span>
